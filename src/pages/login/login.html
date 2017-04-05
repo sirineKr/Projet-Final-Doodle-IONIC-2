@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Doodle
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="clickRegister()">
+        <ion-icon name="person"> Register</ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons start>
+      <button ion-button icon-only disabled="false">
+        <ion-icon name="lock"> Sign in</ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+
+  <ion-card-header class="card">
+    sign in
+  </ion-card-header>
+<ion-card-content>
+
+<ion-list no-lines>
+ 
+    <form [formGroup]="slideOneForm">
+ 
+        <ion-item>
+            <ion-icon name="person" item-left></ion-icon>
+            <ion-label floating>Email</ion-label>
+            <ion-input formControlName="login" type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="lock" item-left></ion-icon>
+            <ion-label floating>Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <br/>
+        <button ion-button full color="primary" (click)="signin()">Sign in !</button>
+ 
+    </form>
+ 
+</ion-list>
+
+ 
+   </ion-card-content>
+
+</ion-card>
+</ion-content>

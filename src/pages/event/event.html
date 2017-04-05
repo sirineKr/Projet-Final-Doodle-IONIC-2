@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="primary" hideBackButton>
+    <ion-title>Doodle</ion-title>
+    
+    <ion-buttons start>
+      <button ion-button icon-only >
+        <ion-title>{{firstName}} {{lastName}}</ion-title>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <br/>
+    <h3>la liste des évenements</h3>
+    <br/>
+<ion-list >
+    <ion-item text-wrap *ngFor="let post of callws.posts" (click)="clickEvent(post)" >
+	    <h2>{{post.titre}}</h2>
+        <p>{{post.description}}</p>
+        <ion-badge item-right>{{post.nbrvote}}</ion-badge>
+	</ion-item>
+</ion-list>
+</ion-content>

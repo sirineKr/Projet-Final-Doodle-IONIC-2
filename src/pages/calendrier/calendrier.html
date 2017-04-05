@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="primary" hideBackButton>
+    <ion-title>Doodle</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only >
+        <ion-title>{{firstName}} {{lastName}}</ion-title>
+      </button>
+      <button ion-button icon-only (click)="listEvent()" >
+        <ion-icon name="menu"> Events</ion-icon>
+      </button>
+      <button ion-button icon-only (click)="changeMode()" >
+        <ion-icon name="star"> Max vote</ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+<br/>
+<h3>Calendrier de l'évenement </h3>
+<br/>
+<p>Veuillez mettre votre préférence pour cette évenement :</p>
+<br/>
+  <angular2-fullcalendar [options]="calendarOptions" id="mycall"></angular2-fullcalendar>
+</ion-content>

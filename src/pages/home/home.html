@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Doodle
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="clickRegister()">
+        <ion-icon name="person"> Register</ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons start>
+      <button ion-button icon-only (click)="clickLogin()">
+        <ion-icon name="lock"> Sign in</ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <br/>
+  <h3>Doodle simplifie la planification de réunions</h3>
+
+  <p>L'outil de planification que vous allez réellement utiliser. Trouvez une date pour un rendez-vous deux fois plus vite !</p>
+    <ion-slides pager>
+      <ion-slide>
+        <img src="/assets/icon/Capture d’écran 2017-04-02 à 23.14.02.png"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/icon/Capture d’écran 2017-04-02 à 22.54.18.png"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/icon/Capture d’écran 2017-04-02 à 19.59.15.png"/>
+      </ion-slide>
+    </ion-slides>
+</ion-content>
